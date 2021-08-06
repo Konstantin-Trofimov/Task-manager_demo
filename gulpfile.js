@@ -8,7 +8,7 @@ const rename       = require('gulp-rename')
 const concat       = require('gulp-concat')
 const uglify       = require('gulp-uglify-es').default
 const newer        = require('gulp-newer')
-const sass         = require('gulp-sass')
+const scss         = require('gulp-sass')
 const del          = require('del')
 
 
@@ -45,15 +45,15 @@ const scripts = () => {
 }
 
 const styles = () => {
-	return src('app/sass/*.sass')
-	.pipe(sass())
+	return src('app/scss/main.scss')
+	.pipe(scss())
 	.pipe(rename('style.min.css'))
 	.pipe(autoprefixer({
 		overrideBrowserslist: ['last 10 versions'],
 		grid: true
 	}))
 	.pipe(cleanCSS(({ level: { 1: { specialComments: 0 } } })))
-	.pipe(dest('app/css'))
+	.pipe(dest('dist/css'))
 	.pipe(browserSync.stream())	
 }
 
@@ -81,20 +81,20 @@ const fonts = () => {
 	.pipe(browserSync.stream())
 }
 
-const cleansass = () => {
-	return del('app/sass/*.css');
+const cleanscss = () => {
+	return del('app/scss/*.css');
 }
 
 const watcher = () => {
 	watch('app/*.html').on('change', parallel(html))
-	watch('app/sass/*.sass', series(styles, cleansass))
+	watch('app/scss/*.scss', series(styles, cleanscss))
 	watch(['app/**/*.js', '!app/**/*.min.js'], scripts)
 	watch('app/images/**/*', images)
 	watch('app/icons/**/*', icons)
 	watch('app/fonts/**/*', fonts)
 }
 
-const build = parallel(html, scripts, styles, images, icons, fonts, server, watcher, cleansass)
+const build = parallel(html, scripts, styles, images, icons, fonts, server, watcher, cleanscss)
 
 exports.server    = server
 exports.watcher   = watcher
@@ -103,7 +103,7 @@ exports.scripts   = scripts
 exports.styles    = styles
 exports.images    = images
 exports.fonts     = fonts
-exports.cleansass = cleansass
+exports.cleanscss = cleanscss
 exports.cleanimg  = cleanimg
 
 exports.default = build

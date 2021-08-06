@@ -23,5 +23,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
+  }
 }
