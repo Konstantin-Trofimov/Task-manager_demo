@@ -13,24 +13,34 @@ a {
 	text-decoration: none;
 }
 
-.header {
+.container {
 	max-width: 1338px;
+	margin: auto;
+}
+
+.header {
+	width: 100%;
 	height: 123px;
 	margin: 20px auto 0;
-	padding: 5px 22px 16px 24px;
+	padding: 5px 24px 16px 22px;
 }
 
-.content {
-	margin: 30px auto 0;
-	max-width: 1338px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 144px 426px;
-	gap: 30px;
+.content-info {
+	@include content;
+	grid-template-rows: 144px;		
 }
 
-.list-header, .list-body, .header{
+.content-main {
+	@include content;
+	grid-template-rows: 686px;	
+}
+
+.info, .list, .header{
 	background: $white;
 	box-shadow: 0px 0px 15px rgba(100, 100, 100, 0.25);
 	border-radius: 10px;
 }
+
+
+
+

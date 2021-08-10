@@ -3,3 +3,45 @@
     position: absolute;
 	background-color: #B0B0B0;
 }
+
+@mixin horizontal-divider {
+    height: .5px;
+	width: 100%;
+}
+
+@mixin vertical-divider {
+    left: -20px;
+    top: 1px;
+    height: 46px;
+    width: .5px;
+}
+
+@mixin long-vertical-divider {
+    left: -22px;
+    height: 47px;
+    width: .5px;
+}
+
+@mixin regular-text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;	
+}
+
+@mixin underline {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transition: ease 1s;
+    background-color: $dark-text;
+    left: 0;
+}
+
+@mixin content {
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px auto 18px;
+    width: 100%;
+    gap: 30px;
+}

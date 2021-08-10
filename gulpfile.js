@@ -22,6 +22,8 @@ const server = () => {
 	})
 
 	watch('app/**/*.html').on('change', browserSync.reload)
+	
+	
 }
 
 const html = () => {
@@ -87,7 +89,7 @@ const cleanscss = () => {
 
 const watcher = () => {
 	watch('app/*.html').on('change', parallel(html))
-	watch('app/scss/*.scss', series(styles, cleanscss))
+	watch('app/scss/**/*.+(scss|sass|css)', series(styles, cleanscss))
 	watch(['app/**/*.js', '!app/**/*.min.js'], scripts)
 	watch('app/images/**/*', images)
 	watch('app/icons/**/*', icons)

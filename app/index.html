@@ -7,40 +7,40 @@
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<header class="header">
-		
-		<div class="menu">
-			<div class="menu__info">
-				<a href="#"><img src="./images/logo.svg" alt="logo" class="header__logo"></a> 
-				<div class="menu__search">
-					<input class="menu__search-input" type="text" placeholder="Поиск...">
-					<img src="./images/loupe.svg" alt="loupe">
+	<div class="container">
+		<header class="header">
+			<div class="menu">
+				<div class="menu__info">
+					<a href="#"><img src="./images/logo.svg" alt="logo" class="header__logo"></a> 
+					<div class="menu__search">
+						<input class="menu__search-input" type="text" placeholder="Поиск...">
+						<img src="./images/loupe.svg" alt="loupe">
+					</div>
+				</div>
+				<div class="menu__tool-bar">
+					<div class="menu__question">
+						<div>
+							<img src="./images/question.svg" alt="question">
+							<div class="clue clue_icon">13</div>
+						</div>
+						<a href="#">Задать вопрос</a>
+					</div>
+					<div class="menu__settings">
+						<img src="./images/settings.svg" alt="settings">
+					</div>
+					<div class="menu__user">
+						<div class="menu__user-info">
+							<div class="menu__user-name">Морозова Е. Р.</div>
+							<div class="menu__user-id">ID 458248</div>
+						</div>
+						<div class="menu__user-avatar">
+							<img class="menu__user-avatar-img" src="./images/user.svg" alt="avatar">
+						</div>
+						<img class="menu__user-dropdown" src="./images/dropdown.svg" alt="dropdown">
+					</div>
 				</div>
 			</div>
-			<div class="menu__tool-bar">
-				<div class="menu__question">
-					<div>
-						<img src="./images/question.svg" alt="question">
-						<div class="clue clue_icon">13</div>
-					</div>
-					<a href="#">Задать вопрос</a>
-				</div>
-				<div class="menu__settings">
-					<img src="./images/settings.svg" alt="settings">
-				</div>
-				<div class="menu__user">
-					<div class="menu__user-info">
-						<div class="menu__user-name">Морозова Е. Р.</div>
-						<div class="menu__user-id">ID 458248</div>
-					</div>
-					<div class="menu__user-avatar">
-						<img class="menu__user-avatar-img" src="./images/user.svg" alt="avatar">
-					</div>
-					<img class="menu__user-dropdown" src="./images/dropdown.svg" alt="dropdown">
-				</div>
-			</div>
-			
-		</div>
+
 			<nav class="nav">
 				<ul class="nav__list">
 					<li class="nav__list-item">
@@ -69,28 +69,226 @@
 					</li>
 					<li class="nav__list-item">
 						<a href="#" class="nav__list-link">Избранное</a>
-					    <div class="clue"></div>
+						<div class="clue"></div>
 					</li>
 				</ul>
 
 				<div class="nav__new-order">
-					<button class="new-order__btn">
+					<button class="new-order waves">
 						<img src="./images/+.svg" alt="add">
 					</button>
 					<span>Создать заявку</span>
 				</div>
 			</nav>
-	</header>
+		</header>
 
-	<section class="content">
-		<div class="list-header"></div>
-		<div class="list-header"></div>
-		<div class="list-header"></div>
+	
+		<section class="content-info section-inner">
+			<div class="info">
+				<h2 class="info__title">Задачи</h2>
+				<div class="info__body">
+					<div class="info__descr">
+						<div>Входящие:<span>5</span></div>
+					</div>
+					<div class="info__descr">
+						<div>Просроченные:<span>43</span></div>
+					</div>
+				</div>
+			</div>
 
-		<div class="list-body"></div>
-		<div class="list-body"></div>
-		<div class="list-body"></div>
-	</section>
+			<div class="info">
+				<h2 class="info__title">Документы</h2>
+				<div class="info__body">
+					<div class="info__descr">
+						<div>Входящие:<span>5</span></div>
+					</div>
+					<div class="info__descr">
+						<div>Просроченные:<span>43</span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="info info_orders">
+				<div class="info__wrapper">
+					<h2 class="info__title">Заявки</h2>
+					<button class="new-order new-order_large">
+						<img src="./images/+.svg" alt="add">
+						<span>Создать заявку</span>
+					</button>
+				</div>
+					
+			
+				<div class="info__body">
+					<div class="info__descr">
+						<div>Исходящие:<span>5</span></div>
+					</div>
+					<div class="info__descr">
+						<div>Просроченные:<span>43</span></div>
+					</div>
+				</div>
+			</div>
+		</section> 
+
+		<section class="content-main section-inner">
+				<div class="list scrollbar">
+					<h2 class="list__header">Список задач</h2>
+					<div class="list__menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+
+				<div class="list__filter">
+					<label class="radio">
+						<input class="radio__input" type="radio"  name="tasks">			
+						<span class="radio__input-text ">Входящие</span>
+					</label>
+					<label class="radio">
+						<input class="radio__input" type="radio"  name="tasks">			
+						<span class="radio__input-text">Просроченные</span>
+					</label> 
+				</div>
+
+				<ul>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="list scrollbar">
+				<h2 class="list__header">Список документов</h2>
+				<div class="list__menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+					<div class="list__filter">
+						<label class="radio">
+							<input class="radio__input" type="radio"  name="docs">
+							<span class="radio__input-text ">Входящие</span>
+						</label>
+						<label class="radio">
+							<input class="radio__input" type="radio"  name="docs">
+							<span class="radio__input-text">Просроченные</span>
+						</label> 
+					</div>
+
+				<ul>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="list scrollbar">
+				<h2 class="list__header">Список ЗАЯВОК</h2>
+				<div class="list__menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<div class="list__filter">
+					<label class="radio">
+						<input class="radio__input" type="radio"  name="orders">
+						<span class="radio__input-text ">Исходящие</span>
+					</label>
+					<label class="radio">
+						<input class="radio__input" type="radio"  name="orders">
+						<span class="radio__input-text">Просроченные</span>
+					</label> 
+				</div>
+				
+				<ul>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li >
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+					<li>
+						<p><span>02</span><span>июля</span><span>2021</span><span>14:05</span></p>
+						<div>Отправка Договора №567/12 от 30.06.21 сотруднику Ольга Максимова (ID 723458)</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	
 
 	<script src="js/app.min.js"></script>
 </body>

@@ -1,0 +1,45 @@
+.info {
+    padding: 24px 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+
+    &_orders {
+        padding: 15px 24px 20px;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $dark-text;
+    }
+
+    &__wrapper {
+        align-items: center
+    }
+
+    &__body, &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__descr {
+        div {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: $dark-text;
+
+            span {
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 34px;
+                padding-left: 12px;
+                color: $dark-text;
+            }
+        }
+    }
+}

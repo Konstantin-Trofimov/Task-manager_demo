@@ -1,0 +1,160 @@
+@media (max-width: 1360px) {
+    .container {
+        max-width: 1230px;
+    }
+    .menu {
+        &__info {
+          margin-right: 40px;  
+        }
+        &__search {
+            margin-left: calc(126px + (226 - 126) * ((100vw - 768px) / (1360 - 768)));
+           
+        }
+        &__tool-bar {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .nav {
+        ul {
+            li:nth-child(6), li:nth-child(7){
+                display: none;
+            }
+        }
+        &__new-order {
+            margin: 0 auto;
+        }
+    }
+   
+    .content-imfo {
+        grid-template-rows: 144px;
+    }
+    .content-maib {
+        grid-template-rows: 616px;
+    }
+}
+
+@media (max-width: 1201px) {
+
+    .content {
+        gap: 15px;
+    }
+
+    .menu {
+        // &__info {
+            
+            
+        // } 
+        &__search {
+            width: 337px;
+        }
+    } 
+    
+    .nav {
+        ul {
+            margin: 0 auto;
+            width: auto;
+        }
+
+    }
+}
+
+@media (max-width: 1101px) {
+
+    .section-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    
+
+    .content-info {
+        grid-template-rows: minmax( 206px, 1fr);		
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .content-main {
+        gap: 20px;
+    }
+
+    .info {
+        justify-content: start;
+
+        &__body {
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 55px;
+
+        }
+
+    }
+    
+}
+    
+@media (max-width: 1024px) {
+
+    .menu {
+
+        &__tool-bar {
+            width: calc(182px + (300 - 182) * ((100vw - 320px) / (946 - 320)));
+            
+        }
+        &__search {
+            width: 337px;
+        }
+        &__question {
+            margin-left: 0;
+            margin-right: 0;
+            justify-content: center;
+            div {
+                margin-right: 0;
+            }
+            a {
+                display: none;
+            }
+        }
+        &__user {
+            &-info {
+                display: none;
+            }
+        }
+        
+    }
+
+    .nav__list {
+        margin: 0 auto;
+    }
+
+    .nav__new-order {
+        float: left;
+        margin: 0;
+    }
+
+   .new-order_large {
+       
+        width: 28px;
+        height: 28px;
+        border-radius: 5px;
+
+        img {
+			margin-right: 0;
+		}
+
+        span {
+            display: none;
+        }
+    }
+
+    .content-main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 520px 520px 520px;	
+        gap: 40px;
+    }
+    
+    
+}
+
+             
+           
